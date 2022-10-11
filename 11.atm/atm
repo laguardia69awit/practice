@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class App {
+
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) throws Exception {
+
+        atm();
+    }
+
+    static void atm() {
+        System.out.println("11. Think like an ATM");
+        System.out.print("Enter the total amount of money in your bank account: ");
+        int amount = sc.nextInt();
+
+        int[] intNotes = { 500, 100, 50, 20 };
+        for (int i = 0; i <= 1000; i = i + 10) {
+            if (!canDispenseInit(amount, i)) {
+                System.out.println(i + " : false");
+            }
+        }
+    }
+
+    public static boolean canDispenseInit(int[] amount, int intAmountToDispense) {
+        for (int x = 0; x < amount.length; x++) {
+            if (canDispense(amount, intAmountToDispense, x)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean canDispense(int[] amount, int intAmountToDispense, int intStartAt) {
+        for (int x = intStartAt; x < amount.length; x++) {
+            if (intAmountToDispense >= amount[x]) {
+                int intMod = intAmountToDispense % amount[x];
+
+                if (intMod == 0) {
+                    return true;
+                } else {
+                    return canDispense(amount, intMod, x++);
+                }
+            } else {
+            }
+        }
+        return false;
+    }
+}
