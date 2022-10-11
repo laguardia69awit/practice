@@ -1,0 +1,44 @@
+        // Long exam 2
+        // Total points possible (100 pts)
+        // Methods and Conditions
+
+        // Part I
+        // 1. Create a method.
+        // 2. Call the method.
+        // 3. Print result of the method.
+
+        // ==============================================================================
+        // 1. Create a method that will:
+        // print "POSITIVE" if the number is a positive number. 
+        // print "NEGATIVE" if the number is a negative number. 
+        // print "ZERO" if the number is ZERO. 
+        //(10 pts)
+        static void posneg (){
+        System.out.println("1. Positive, negative, zero");
+        System.out.print("Enter a number: ");
+        int number = luis.nextInt();
+        }
+        // ==============================================================================
+
+        // 2. Create a method that will:
+        // print "PRIME" if the last digit of your student number is a prime number
+        // print "COMPOSITE" if the last digit of your student number is a composite
+        // number.
+        // print "NEITHER" if the last digit of your student number is neither a prime
+        // or a composite number.
+        // (10 pts)
+        static void primecompos() {
+        System.out.println("2. PRIME or COMPOSITE number");
+        System.out.print("Enter the last digit of your student number: ");
+        int lastDigit = luis.nextInt();
+
+        // ==============================================================================
+
+         // 3. Create a method that will return the sum of the character length of your
+        // firstname and your surname. (10 pts)
+        System.out.println("3. Length of your fullname");
+        System.out.print("Enter your firstname: ");
+        String firstName = luis.next();
+        System.out.print("Enter your surname: ");
+        String surName = luis.next();
+        // ==============================================================================
